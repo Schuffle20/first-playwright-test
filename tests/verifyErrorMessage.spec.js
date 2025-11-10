@@ -1,9 +1,17 @@
 const { test, expect } = require("@playwright/test");
 
+test.use({
+  viewport: { width: 1280, height: 700 },
+});
+
 test("Verify Error Message", async ({ page }) => {
   await page.goto(
     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
   );
+
+  console.log(await page.viewportSize().width);
+  console.log(await page.viewportSize().height);
+
   //   await page.getByPlaceholder("Username").type("Admin", { delay: 200 });
   await page.fill('input[placeholder="Username"]', "Admin");
 
@@ -17,5 +25,6 @@ test("Verify Error Message", async ({ page }) => {
 
   console.log("Error Message is: " + errorMessage);
 
+  expect(errorMessage.includes("Invalid")).toBeTruthy();
   expect(errorMessage.includes("Invalid credentials")).toBeTruthy();
 });
