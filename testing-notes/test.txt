@@ -1,0 +1,7 @@
+To Auto Record with Codegen
+To check the help from code gen
+npx playwright codeine —help
+npx playwright codegen https://opensource-demo.orangehrmlive.com/web/index.php/auth/login -o ./tests/codegen.spec.js
+
+For Separate Channel:
+npx playwright codegen https://opensource-demo.orangehrmlive.com/web/index.php/auth/login -o ./tests/codegenBranded.spec.js --channel=chrome
