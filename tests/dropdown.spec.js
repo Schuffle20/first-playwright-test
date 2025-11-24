@@ -48,6 +48,6 @@ test("Select Values from Dropdown", async ({ page }) => {
 
   //   Select Multiple Values
 
-  await page.locator("#hobbies").selectOption(["Playing", "Reading"]);
-  await page.waitForTimeout(3000);
+  await page.locator("#hobbies").selectOption(["Playing", "Swimming"]);
+  await page.waitForTimeout(2000);
 });
