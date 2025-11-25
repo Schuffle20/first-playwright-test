@@ -5,3 +5,17 @@ npx playwright codegen https://opensource-demo.orangehrmlive.com/web/index.php/a
 
 For Separate Channel:
 npx playwright codegen https://opensource-demo.orangehrmlive.com/web/index.php/auth/login -o ./tests/codegenBranded.spec.js --channel=chrome
+
+For Running specfic test within specific file
+npx playwright test -g "My Fourth Test" --headed
+
+For Running specific test usimg only file name
+npx playwright test sample
+
+FOr running the specific file with full name on specific project/browser
+% npx playwright test ./tests/dropdown.spec.js --headed --project=chrome 
+
+
+Useful Websites:
+https://demoqa.com/login
+https://the-internet.herokuapp.com

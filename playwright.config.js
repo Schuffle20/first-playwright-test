@@ -48,15 +48,35 @@ export default defineConfig({
     // },
 
     {
-      name: "firefox",
+      name: "chrome",
       use: {
-        ...devices["Desktop Firefox"],
-        viewport: { width: 1920, height: 1080 },
+        channel: "chrome",
         screenshot: "on",
         video: "on",
         trace: "on",
       },
     },
+
+    // {
+    //   name: "edge",
+    //   use: {
+    //     channel: "msedge",
+    //     screenshot: "on",
+    //     video: "on",
+    //     trace: "on",
+    //   },
+    // },
+
+    // {
+    //   name: "firefox",
+    //   use: {
+    //     ...devices["Desktop Firefox"],
+    //     viewport: { width: 1920, height: 1080 },
+    //     screenshot: "on",
+    //     video: "on",
+    //     trace: "on",
+    //   },
+    // },
 
     // {
     //   name: 'webkit',
